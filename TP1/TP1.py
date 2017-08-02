@@ -1,4 +1,5 @@
 import math
+from decimal import Decimal
 from math import pi
 
 
@@ -13,6 +14,7 @@ def selectionNumber():
         calculatePiGaussFloat()
         selectionNumber()
     if number == 3:
+        calculatePiGaussDecimal()
         selectionNumber()
     if number == 4:
         calculatePiSpigot()
@@ -41,6 +43,26 @@ def calculatePiGaussFloat():
 
     print("\nEl valor de pi es:", result)
 
+def calculatePiGaussDecimal():
+    i=0
+    a = Decimal(1)
+    b = Decimal(Decimal(1) / Decimal(math.sqrt(2)))
+    t = Decimal(1/4)
+    p = Decimal(1)
+
+    while i != 4:
+        a1 = Decimal(Decimal(D(a)+ Decimal(b))/Decimal(2))
+        b1 = math.sqrt(a*b)
+        t = t - (p*((a-a1)**2))
+        p = 2*p
+        a=a1
+        b=b1
+        i=i+1
+
+    result = ((a+b)**2)/(4*t)
+
+    print("\nEl valor de pi es:", result)
+
 
 
 # Arreglar spigot, no hace lo que debe
@@ -50,7 +72,7 @@ def calculatePiSpigot():
     i=0
 
     while i != max:
-        result = result + float(((-1)**i)/((2*i)+1))
+        result = result + float(((-1)**(i+1))/((2*i)-1))
         i = i+1
 
     result = result*4
