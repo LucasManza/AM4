@@ -63,7 +63,7 @@ def calculatePiSpigot():
         # result += (math.pow(factorial(i), 2) * math.pow(2, (i + 1)))/(factorial((2*i)+1))
         i = i + 1
 
-#Para usar el otro algoritmo basta solo comentar lineas 58 y 63. Descomentar linea 59
+# Para usar el otro algoritmo basta solo comentar lineas 58 y 63. Descomentar linea 59
     result = result * 4
 
     print("\nEl valor de pi es:", result)
