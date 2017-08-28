@@ -1,6 +1,7 @@
 import math
 from decimal import Decimal
 from math import pi
+import decimal
 
 
 def selectionNumber():
@@ -48,32 +49,52 @@ def calculatePiGaussFloat():
     print("\nEl valor de pi es:", result)
 
 def calculatePiGaussDecimal():
-    print(Decimal(pi))
-
-
-
-# Arreglar spigot, no hace lo que debe
-def calculatePiSpigot():
-    max = int(input("\nIngrese el numero: "))
-    result = float(0)
     i = 0
+    a = Decimal(1)
+    b = Decimal(1 / math.sqrt(2))
+    t = Decimal(1 / 4)
+    p = Decimal(1)
 
-    while i <= max:
-        result += (math.pow(-1, i)) / ((2 * i) + 1)
-        # result += (math.pow(factorial(i), 2) * math.pow(2, (i + 1)))/(factorial((2*i)+1))
+    while i != 4:
+        a = decimal.Decimal(float(a))
+        b = decimal.Decimal(float(b))
+        a1 = (decimal.Decimal(a) + decimal.Decimal(b)) / decimal.Decimal('2')
+        b1 = math.sqrt(a * b)
+        t = t - (p * ((a - a1) ** 2))
+        p = 2 * p
+        a = a1
+        b = b1
         i = i + 1
 
-#Para usar el otro algoritmo basta solo comentar lineas 58 y 63. Descomentar linea 59
-    result = result * 4
+    result = ((decimal.Decimal(a) + decimal.Decimal(b)) ** decimal.Decimal('2')) / (decimal.Decimal('4') * decimal.Decimal(t))
 
     print("\nEl valor de pi es:", result)
 
 
-def factorial(n):
-    if n == 0:
-        return 1
-    else:
-        return n * factorial(int(n - 1))
+
+def calcPiSpigot(max):
+    k, a, b, a1, b1 = 2, 4, 1, 12, 4
+    while max > 0:
+        p, q, k = k * k, 2 * k + 1, k + 1
+        a, b, a1, b1 = a1, b1, p * a + q * a1, p * b + q * b1
+        d, d1 = a / b, a1 / b1
+        while d == d1 and max > 0:
+            yield int(d)
+            max -= 1
+            a, a1 = 10 * (a % b), 10 * (a1 % b1)
+            d, d1 = a / b, a1 / b1
+
+def calculatePiSpigot():
+    max = int(input("\nIngrese la cantidad de digitos: "))
+    piSpigot = list(calcPiSpigot(max))
+    result = str(list(piSpigot).pop(0))
+    if max > 1:
+        result += "."
+    i = 1
+    while i != max:
+        result += str(list(piSpigot).pop(i))
+        i += 1
+    print(result)
 
 
 selectionNumber()
