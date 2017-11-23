@@ -10,6 +10,10 @@ def lagrange(numbersOfElements, x, i, listX):
 def polynomial(numbersOfElements, x, listX, listY):
     result = float(0)
     for i in range(0, numbersOfElements):
-        result += (lagrange(numbersOfElements, x, i, listX) - listY[i])
+        result += ( (lagrange(numbersOfElements, x, i, listX) * listY[i]) )
     return result
 
+numbersX = [1,3,5,7,9]
+numbersY = [2,4,6,8,10]
+
+print(polynomial(len(numbersX), 2, numbersX, numbersY))
