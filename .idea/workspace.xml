@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e404677-74c3-4fdd-8a4c-ad98d4484044" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TP3/RungeKutta.py" afterPath="$PROJECT_DIR$/TP3paske/RungeKutta.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TP3/__init__.py" afterPath="$PROJECT_DIR$/TP3paske/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TP3/csv/temperature0.csv" afterPath="$PROJECT_DIR$/TP3paske/csv/temperature0.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TP3/heatmap/map0.png" afterPath="$PROJECT_DIR$/TP3paske/heatmap/map0.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/TP3/heatmaps.py" afterPath="$PROJECT_DIR$/TP3paske/heatmaps.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/AM4.iml" afterPath="$PROJECT_DIR$/.idea/AM4.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,6 +33,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="LucasManza &lt;lucas.manzanelli@ing.austral.edu.ar&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -126,6 +124,14 @@
       <option name="presentableId" value="Default" />
       <updated>1511564231679</updated>
     </task>
+    <task id="LOCAL-00001" summary="adf">
+      <created>1511821839385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1511821839385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -157,6 +163,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adf" />
+    <option name="LAST_COMMIT_MESSAGE" value="adf" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
