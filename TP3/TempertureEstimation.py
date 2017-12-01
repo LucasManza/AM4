@@ -26,10 +26,10 @@ def makeCSV(value):
     xi = 0
     x = value
     for i in range(1, 11):
-        temperatures = calculateTemperatures(temperatures, xi, x)
+        temperatures = calculateTemperatures(temperatures, xi, x) #Modifica los valores del array doble
         xi += value
         x += value
-        temperatures.to_csv('csv/temperaturas_horno{}.csv'.format(i), header=False, index=False)
+        temperatures.to_csv('csv/temperaturas_horno{}.csv'.format(i), header=False, index=False) #Crea un nuevo csv con los nuevos valores
 
 makeCSV(5)
 
