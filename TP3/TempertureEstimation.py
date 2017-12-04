@@ -45,7 +45,10 @@ def generateDATA(iterations):
 def generateHeatMap(matrix, fileName, title):
     plt.clf()
     plt.title(title)
-    plt.imshow(matrix, cmap='CMRmap', vmin=-5, vmax=200)
+    # vmin and vmax for colorscale
+    # cmp --> colormap. Try 'CMRmap' , 'jet', 'hot' or 'rainbow' for
+    #     differents colors scale type.
+    plt.imshow(matrix, cmap='jet', vmin=-5, vmax=200)
     plt.axis('off')
     plt.colorbar()
     plt.savefig(fileName)
