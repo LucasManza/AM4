@@ -29,8 +29,7 @@ def calculateTemperatures(temperaturesPrevious, x0, x):
 
 
 def generateDATA(iterations):
-    temperatures = pd.read_csv('csv/temperaturas_horno0.csv',
-                               header=None)  # Pandas se encarga de que el csv se comporte como un array doble
+    temperatures = pd.read_csv('csv/temperaturas_horno0.csv', header=None)  # Pandas se encarga de que el csv se comporte como un array doble
     generateHeatMap(temperatures, 'heatMaps/temperatures_horno{}.png'.format(0), title='T{}'.format(0))
     xi = 0
     x = iterations
@@ -55,5 +54,4 @@ def generateHeatMap(matrix, fileName, title):
 
 
 def generateCSV(temperatures, fileName):
-    temperatures.to_csv(fileName, header=False,
-                        index=False)  # Crea un nuevo csv con los nuevos valores
+    temperatures.to_csv(fileName, header=False, index=False)  # Crea un nuevo csv con los nuevos valores
